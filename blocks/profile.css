@@ -75,6 +75,9 @@
   background-color: #212121;
   color: #fcf5e5;
   opacity: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
 }
 
 .profile__add-btn:hover {
