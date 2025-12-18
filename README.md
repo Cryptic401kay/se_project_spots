@@ -1,21 +1,19 @@
-# Project 3: Spots
+# Spots
 
-### Overview  
+A public social media site where people can publish and share images of various public places.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+## Description
+
+This current project displays the layout of a public media site where people can share posts and images of various places they have visited. It also shows people a brief summary of who you are along with your profession, hobbies, favorite places to visit and anything else you would like to share. This project has a modern and adaptive design that suits well with both wide screen computers to small mobile phone screens. The site has three main functions for users. The "Edit Profile" button allows the user to edit and post there name along with a brief description. The "+ New Post" button allows the user to publish new photos to there webpage. The final function is the like button, shaped like a heart, this allows users to favorite pictures from various other users.
+
+## Tech Stacks Applied
+
+- HTML
+- CSS
+- Responsive Design
+
+## Deployment
+
+This current webpage is deployed in GitHub Pages
+
+- [Deployment Link](https://Cryptic401kay.github.io/se_project_spots)
