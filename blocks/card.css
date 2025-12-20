@@ -7,7 +7,6 @@
   font-size: 20px;
   line-height: 1.2;
   color: #212121;
-  margin-top: 12px;
   margin-bottom: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -19,14 +18,14 @@
   height: 413px;
   object-fit: cover;
   display: block;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .card__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+   margin-top: 12px;
 }
 
 .card__like-btn {
