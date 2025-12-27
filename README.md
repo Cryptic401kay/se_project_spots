@@ -17,3 +17,7 @@ This current project displays the layout of a public media site where people can
 This current webpage is deployed in GitHub Pages
 
 - [Deployment Link](https://Cryptic401kay.github.io/se_project_spots)
+
+## Project Pitch Video
+
+Check out [Video Link](https://drive.google.com/file/d/1TYHJETiuNLRoL6m4MK9n6Z01f0M5fL5j/view?usp=sharing), where I describe my project and some challenges I faced while building it.
