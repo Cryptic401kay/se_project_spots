@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .modal_is-opened {
@@ -66,14 +67,14 @@
   width: 100%;
   border-color: #2121214d;
   border-radius: 8px;
-  padding: 16px 16px;
+  padding: 16px 12px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0;
-  
+
 }
 
 .modal__input::placeholder {
@@ -88,4 +89,32 @@
   gap: 8px;
   background-color: #212121;
   color: #fcf5e5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+
+@media screen and (max-width: 627px) {
+
+  .modal__title {
+    font-size: 20px;
+    margin: 0 0 24px;
+  }
+
+  .modal__label {
+    font-size: 16px;
+  }
+
+  .modal__input {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    max-width: 100%;
+  }
+
 }
