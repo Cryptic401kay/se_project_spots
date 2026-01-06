@@ -17,6 +17,7 @@
 }
 
 .modal__container {
+  box-sizing: border-box;
   max-width: 730px;
   width: 100%;
   border-radius: 8px;
@@ -62,6 +63,7 @@
 }
 
 .modal__input {
+  box-sizing: border-box;
   display: block;
   margin: 8px 0 0;
   width: 100%;
@@ -82,7 +84,7 @@
   opacity: 30%;
 }
 
-.submit-btn {
+.modal__submit-btn {
   max-width: 156px;
   height: 52px;
   border-radius: 8px;
