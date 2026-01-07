@@ -102,6 +102,10 @@
 
 @media screen and (max-width: 627px) {
 
+  .modal__container {
+    padding: 12px;
+  }
+
   .modal__title {
     font-size: 20px;
     margin: 0 0 24px;
@@ -115,7 +119,7 @@
     font-size: 16px;
   }
 
-  .submit-btn {
+  .modal__submit-btn {
     max-width: 100%;
   }
 
