@@ -39,7 +39,7 @@
   font-size: 16px;
   line-height: 1;
   color: #212121;
-  opacity: 70%;
+  opacity: 0.7;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -60,12 +60,12 @@
   background-color: transparent;
   text-align: left;
   padding-left: 0;
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
 }
 
 .profile__edit-btn:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .profile__new-post-btn {
@@ -75,14 +75,14 @@
   border-radius: 8px;
   background-color: #212121;
   color: #fcf5e5;
-  opacity: 100%;
+  opacity: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
 }
 
 .profile__new-post-btn:hover {
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 627px) {

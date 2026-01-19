@@ -1,7 +1,7 @@
 const initialCards = [
   {
     name: "Golden Gate Bridge",
-    link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
   {
     name: "Val Thorens",
@@ -50,7 +50,7 @@ const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
 const previewModal = document.querySelector("#preview-modal");
-const previewModalCloseBtn = previewModal.querySelector(".modal__close");
+const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
 const previewModalImageEl = previewModal.querySelector(".modal__img");
 const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
 
@@ -76,12 +76,12 @@ function getCardElement(data) {
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
   cardDeleteBtnEl.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   cardImageEl.addEventListener("click", () => {
     previewModalImageEl.src = data.link;
     previewModalImageEl.alt = data.name;
+    previewModalCaptionEl.textContent = data.name;
     openModal(previewModal);
   });
 
@@ -119,26 +119,27 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
-function handledEditProfileSubmit(evt) {
+function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = profileNameInput.value;
   profileDescriptionEl.textContent = profileDescriptionInput.value;
   closeModal(editProfileModal);
 }
 
-editProfileForm.addEventListener("submit", handledEditProfileSubmit);
+editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
   const inputValues = {
     name: captionInput.value,
-    link: linkInput.value,
+    link: imageInput.value,
   };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
 
   closeModal(newPostModal);
+  addCardForm.reset();
 }
 
 addCardForm.addEventListener("submit", handleAddCardSubmit);
