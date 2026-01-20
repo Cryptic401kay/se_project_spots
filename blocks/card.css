@@ -13,6 +13,7 @@
   line-height: 1.2;
   color: #212121;
   margin-top: 0;
+  margin-bottom: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -52,7 +53,6 @@
 
 .card__delete-btn:hover {
   background-image: url(../images/trash-Hover.svg);
-  opacity: 0.8;
 }
 
 .card__delete-btn:focus {
@@ -82,7 +82,7 @@
 }
 
 .card__like-btn_active:hover {
-  opacity: 0.4;
+  background-image: url(../images/like-heart-hover.svg);
 }
 
 @media screen and (max-width: 627px) {
