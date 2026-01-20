@@ -59,8 +59,8 @@ const cardTemplate = document
 .content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
 
-function handleDeleteCard() {
-  cardElement.remove();
+function handleDeleteCard(evt) {
+  evt.target.closest(".card").remove();
 }
 
 function handleImageClick(data) {

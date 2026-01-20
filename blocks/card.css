@@ -28,9 +28,6 @@
   cursor: pointer;
 }
 
-.card__image:hover {
-  opacity: 0.8;
-}
 
 .card__content {
   display: flex;
@@ -55,10 +52,6 @@
   background-image: url(../images/trash-Hover.svg);
 }
 
-.card__delete-btn:focus {
-  outline: 2px solid #007bff;
-  outline-offset: 2px;
-}
 
 .card__like-btn {
   background-image: url(../images/heart-icon.svg);
