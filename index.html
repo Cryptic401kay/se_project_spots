@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +11,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <title>Spots</title>
 </head>
+
 <body>
   <div class="page">
     <header class="header">
@@ -20,26 +22,27 @@
         <img src="./images/avatar.jpg" alt="Bessie Coleman's avatar" class="profile__avatar">
         <div class="profile__column">
           <h1 class="profile__name">Aliaune Damala Bouga Time Bongo Puru Nacka Lu Lu Lu Badara Akon</h1>
-          <p class="profile__description">Civil Aviator Known mononymously as Akon (/ˈeɪkɒn/), is a Senegalese-American singer, record producer, and entrepreneur. An influential figure in modern world</p>
+          <p class="profile__description">Civil Aviator Known mononymously as Akon (/ˈeɪkɒn/), is a Senegalese-American
+            singer, record producer, and entrepreneur. An influential figure in modern world</p>
           <button type="button" class="profile__edit-btn">
-          <img src="./images/pencil.svg" alt="pencil icon" />  Edit Profile
-        </button>
+            <img src="./images/pencil.svg" alt="pencil icon" /> Edit Profile
+          </button>
         </div>
         <button type="button" class="profile__new-post-btn">
-          <img src="./images/plus-icon.svg" alt="plus icon" />  New Post
+          <img src="./images/plus-icon.svg" alt="plus icon" /> New Post
         </button>
       </section>
       <section class="cards page__section">
         <ul class="cards__list">
           <template id="card-template">
             <li class="card">
-            <button class="card__delete-btn" type="button"></button>
-            <img src="#" alt="" class="card__image" />
-            <div class="card__content">
-             <h2 class="card__title"></h2>
-             <button type="button" class="card__like-btn" aria-label="Like card"></button>
-            </div>
-          </li>
+              <button class="card__delete-btn" type="button"></button>
+              <img src="#" alt="" class="card__image" />
+              <div class="card__content">
+                <h2 class="card__title"></h2>
+                <button type="button" class="card__like-btn" aria-label="Like card"></button>
+              </div>
+            </li>
           </template>
         </ul>
       </section>
@@ -53,22 +56,16 @@
         <button type="button" class="modal__close-btn">
           <img src="./images/X-icon.svg" alt="close X icon" /></button>
         <h2 class="modal__title">Edit profile</h2>
-        <form class="modal__form">
+        <form class="modal__form" novalidate>
           <label for="profile-name-input" class="modal__label">Name
-            <input
-             id="profile-name-input"
-             type="text"
-             class="modal__input"
-             placeholder="Type your name"
-             required />
+            <input id="profile-name-input" type="text" class="modal__input" placeholder="Type your name" required
+              minlength="2" maxlength="40" />
+            <span id="profile-name-input-error" class="modal__error"></span>
           </label>
           <label for="profile-description-input" class="modal__label">Description
-          <input
-            id="profile-description-input"
-            type="text"
-            class="modal__input"
-            placeholder="Describe yourself"
-            required />
+            <input id="profile-description-input" type="text" class="modal__input" placeholder="Describe yourself"
+              required minlength="2" maxlength="200" />
+            <span id="profile-description-input-error" class="modal__error"></span>
           </label>
           <button type="submit" class="modal__submit-btn">Save</button>
         </form>
@@ -80,22 +77,16 @@
         <button type="button" class="modal__close-btn">
           <img src="./images/X-icon.svg" alt="close X icon" /></button>
         <h2 class="modal__title">New Post</h2>
-        <form class="modal__form">
+        <form class="modal__form" novalidate>
           <label for="card-image-input" class="modal__label">Image link
-            <input
-             id="card-image-input"
-             type="url"
-             class="modal__input"
-             placeholder="Place a link to the picture"
-             required />
+            <input id="card-image-input" type="url" class="modal__input" placeholder="Place a link to the picture"
+              required />
+            <span id="card-image-input-error" class="modal__error"></span>
           </label>
           <label for="caption-input" class="modal__label">Caption
-          <input
-            id="caption-input"
-            type="text"
-            class="modal__input"
-            placeholder="Type your caption"
-            required />
+            <input id="caption-input" type="text" class="modal__input" placeholder="Type your caption" required
+              minlength="2" maxlength="30" />
+            <span id="caption-input-error" class="modal__error"></span>
           </label>
           <button type="submit" class="modal__submit-btn">Save</button>
         </form>
@@ -104,10 +95,7 @@
     <!-- preview post modal -->
     <div class="modal modal_type_preview" id="preview-modal">
       <div class="modal__image-container">
-        <button
-          aria-label="close modal"
-          type="button"
-          class="modal__close-btn modal__close-btn_type_preview">
+        <button aria-label="close modal" type="button" class="modal__close-btn modal__close-btn_type_preview">
           <img src="./images/X-icon-white.svg" alt="close x icon">
         </button>
         <img src="#" alt="" class="modal__img">
@@ -115,6 +103,8 @@
       </div>
     </div>
   </div>
-  <script src="./scripts/index.js"></script>
+  <script defer src="./scripts/validation.js"></script>
+  <script defer src="./scripts/index.js"></script>
 </body>
+
 </html>
