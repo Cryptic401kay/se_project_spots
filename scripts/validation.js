@@ -4,22 +4,24 @@ const settings = {
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_type_error",
-  errorClass: "modal_error"
+  errorClass: "modal__error"
 };
 
-const showInputError = (formEl, inputEl, errorMsg) => {
+const showInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
-  inputEl.classList.add("modal__input_type_error");
+  inputEl.classList.add(settings.inputErrorClass);
+  errorMsg.classList.add(settings.errorClass);
 };
 
-const hideInputError = (formEl, inputEl, errorMsg) => {
+const hideInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = "";
-  inputEl.classList.remove("modal__input_type_error");
+  inputEl.classList.remove(settings.inputErrorClass);
+  errorMsg.classList.remove(settings.errorClass);
 };
 
-const checkInputValidity = (formEl, inputEl) => {
+const checkInputValidity = (formEl, inputEl, config) => {
   if (!inputEl.validity.valid) {
     showInputError(formEl, inputEl, inputEl.validationMessage);
   } else {
@@ -33,23 +35,27 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonEl) => {
+const toggleButtonState = (inputList, buttonEl, config) => {
   if (hasInvalidInput(inputList)) {
-    disabledButton(buttonEl);
+    disableButton(buttonEl, config);
   } else {
-    buttonEl.disabled = false;
-    buttonEl.classList.remove("modal__submit-btn_disabled");
+    enableButton(buttonEl, config);
   };
 };
 
-const disabledButton = (buttonEl, config) => {
+const disableButton = (buttonEl, config) => {
   buttonEl.disabled = true;
-  buttonEl.classList.add("modal__submit-btn_disabled");
+  buttonEl.classList.add(settings.inactiveButtonClass);
 };
 
-const resetValidation = (formEl, inputList) => {
+const enableButton = () => {
+  buttonEl.disabled = false;
+  buttonEl.classList.remove(settings.inactiveButtonClass);
+};
+
+const resetValidation = (formEl, inputList, config) => {
   inputList.forEach((input) => {
-    hideInputError(formEl, input);
+    hideInputError(formEl, input, config);
   });
 };
 

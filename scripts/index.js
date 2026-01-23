@@ -40,7 +40,7 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
 const addCardForm = newPostModal.querySelector(".modal__form");
-const addCardFormSubmitBtn = newPostModal.querySelector(".modal__button");
+const addCardFormSubmitBtn = newPostModal.querySelector(settings.submitButtonSelector);
 const imageInput = newPostModal.querySelector("#card-image-input");
 const captionInput = newPostModal.querySelector("#caption-input");
 
@@ -101,7 +101,7 @@ previewModalCloseBtn.addEventListener("click", function () {
 editProfileBtn.addEventListener("click", function () {
   profileNameInput.value = profileNameEl.textContent;
   profileDescriptionInput.value = profileDescriptionEl.textContent;
-  resetValidation(editProfileForm, [profileNameInput, profileDescriptionInput]);
+  resetValidation(editProfileForm, [profileNameInput, profileDescriptionInput], settings);
   openModal(editProfileModal);
 });
 
@@ -117,9 +117,18 @@ newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
+function handleBackdropClick(evt) {
+  if (evt.target.classList.contains('modal')) {
+    closeModal(evt.target);
+  }
+}
+
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.querySelectorAll('.modal').forEach(modal => {
+  modal.addEventListener('click', handleBackdropClick);
+});
 }
 
 function closeModal(modal) {
