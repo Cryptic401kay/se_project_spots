@@ -21,3 +21,7 @@ This current webpage is deployed in GitHub Pages
 ## Project Pitch Video
 
 Check out [Video Link](https://drive.google.com/file/d/1TYHJETiuNLRoL6m4MK9n6Z01f0M5fL5j/view?usp=sharing), where I describe my project and some challenges I faced while building it.
+
+Check out the second video [Video Link](https://www.loom.com/share/65299d762e1d48cba65e51466c786a31), where I show the added features to the "edit profile" and "new post" buttons.
+
+##Note: Unable to download video from Loom to Google drive without paid membership. Current Link goes directly to Loom page to view. ##

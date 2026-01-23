@@ -147,7 +147,7 @@ function handleAddCardSubmit(evt) {
 
   closeModal(newPostModal);
   addCardForm.reset();
-  disabledButton(addCardFormSubmitBtn);
+  disabledButton(addCardFormSubmitBtn, settings);
 }
 
 addCardForm.addEventListener("submit", handleAddCardSubmit);
