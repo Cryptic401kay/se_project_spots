@@ -123,16 +123,26 @@ function handleBackdropClick(evt) {
   }
 }
 
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_is-opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
   document.querySelectorAll('.modal').forEach(modal => {
   modal.addEventListener('click', handleBackdropClick);
 });
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown, handleEscapeKey");
 }
 
 function handleEditProfileSubmit(evt) {
