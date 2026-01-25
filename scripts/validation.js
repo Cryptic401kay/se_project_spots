@@ -11,14 +11,14 @@ const showInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
   inputEl.classList.add(settings.inputErrorClass);
-  errorMsg.classList.add(settings.errorClass);
+  errorMsgEl.classList.add(settings.errorClass);
 };
 
 const hideInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = "";
   inputEl.classList.remove(settings.inputErrorClass);
-  errorMsg.classList.remove(settings.errorClass);
+  errorMsgEl.classList.remove(settings.errorClass);
 };
 
 const checkInputValidity = (formEl, inputEl, config) => {
@@ -48,7 +48,7 @@ const disableButton = (buttonEl, config) => {
   buttonEl.classList.add(settings.inactiveButtonClass);
 };
 
-const enableButton = () => {
+const enableButton = (buttonEl, config) => {
   buttonEl.disabled = false;
   buttonEl.classList.remove(settings.inactiveButtonClass);
 };
