@@ -37,10 +37,11 @@
 .profile__avatar-btn::after {
   color: white;
   margin-bottom: 12px;
+  content: "Edit Avatar";
 }
 
 .profile__edit-avatar {
-  margin: 0 8px 0;
+  margin: 0 8px 12px;
 }
 
 .profile__column {
@@ -163,6 +164,11 @@
     margin: 0;
     padding: 4px;
     margin-bottom: 4px;
+    opacity: 0;
+  }
+
+  .profile__edit-avatar:hover {
+    opacity: 1;
   }
 
   .profile__column {

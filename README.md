@@ -24,4 +24,6 @@ Check out [Video Link](https://drive.google.com/file/d/1TYHJETiuNLRoL6m4MK9n6Z01
 
 Check out the second video [Video Link](https://www.loom.com/share/65299d762e1d48cba65e51466c786a31), where I show the added features to the "edit profile" and "new post" buttons.
 
+Check out [Video Link](https://www.loom.com/share/8622eec85f654f44922bac0c0032293b?t=149), where the new version "PROJECT 9 BRANCH" is shown along with all of its new features.
+
 ##Note: Unable to download video from Loom to Google drive without paid membership. Current Link goes directly to Loom page to view. ##
