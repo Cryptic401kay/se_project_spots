@@ -186,7 +186,7 @@ function handleBackdropClick(evt) {
 function handleEscapeKey(evt) {
   if (evt.key === "Escape") {
     const currentModal = document.querySelector(".modal_is-opened");
-    if (openModal) {
+    if (currentModal) {
       closeModal(currentModal);
     }
   }
@@ -297,10 +297,7 @@ function handleNewPostSubmit(evt) {
       disableButton(newPostSubmitBtn, settings);
       closeModal(newPostModal);
     })
-    .catch(console.error)
-    .finally(() => {
-      setButtonText(submitBtn, false);
-    });
+    .catch(console.error);
 }
 
 newPostModal.addEventListener("submit", handleNewPostSubmit);
