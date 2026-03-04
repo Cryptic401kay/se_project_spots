@@ -109,9 +109,9 @@ function getCardElement(data) {
   cardTitleEl.textContent = data.name;
 
   if (data.isLiked === true) {
-    cardLikeBtnEl.classList.add("card__like-button_active");
+    cardLikeBtnEl.classList.add("card__like-btn_active");
   } else {
-    cardLikeBtnEl.classList.remove("card__like-button_active");
+    cardLikeBtnEl.classList.remove("card__like-btn_active");
   }
 
   cardLikeBtnEl.addEventListener("click", (evt) => {
@@ -229,9 +229,6 @@ deletePostForm.addEventListener("submit", handleDeleteSubmit);
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  document.querySelectorAll(".modal").forEach((modal) => {
-    modal.addEventListener("click", handleBackdropClick);
-  });
   document.addEventListener("keydown", handleEscapeKey);
 }
 

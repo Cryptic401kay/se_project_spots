@@ -178,9 +178,12 @@
         </div>
       </div>
     </div>
+    <!-- EDIT AVATAR MODAL -->
     <div class="modal" id="edit-avatar-modal">
       <div class="modal__container">
-        <button type="button" class="modal__close-btn"></button>
+        <button type="button" class="modal__close-btn">
+          <img src="<%=require('./images/X-icon.svg')%>" alt="close X icon" />
+        </button>
         <h2 class="modal__title modal__type_avatar">Edit Avatar</h2>
         <form class="modal__form" novalidate id="edit-avatar-form">
           <label for="avatar-name-input" class="modal__label"
