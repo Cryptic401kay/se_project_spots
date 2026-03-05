@@ -29,10 +29,7 @@ api
     profileDescriptionEl.textContent = user.about;
     profileAvatar.src = user.avatar;
   })
-  .catch(console.error)
-  .finally(() => {
-    setButtonText;
-  });
+  .catch(console.error);
 
 //EDIT PROFILE SET---------
 const editProfileBtn = document.querySelector(".profile__edit-btn");
