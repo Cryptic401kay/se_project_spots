@@ -294,7 +294,10 @@ function handleNewPostSubmit(evt) {
       disableButton(newPostSubmitBtn, settings);
       closeModal(newPostModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(submitBtn, false);
+    });
 }
 
 newPostModal.addEventListener("submit", handleNewPostSubmit);

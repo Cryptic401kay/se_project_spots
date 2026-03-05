@@ -66,9 +66,8 @@
 
 .modal__close-btn_type_preview {
   top: 0;
-  right: 0;
+  right: -52.5px;
   opacity: 1;
-  position: relative;
 }
 
 .modal__close-btn_type_delete {
@@ -212,7 +211,7 @@
   letter-spacing: 0;
 }
 
-.modal__submit .modal__image-container {
+.modal__image-container {
   position: relative;
 }
 
